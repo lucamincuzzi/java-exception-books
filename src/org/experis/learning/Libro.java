@@ -18,4 +18,51 @@ public class Libro {
         this.autore = autore;
         this.editore = editore;
     }
+
+    // Metodi
+
+        // Getter e Setter
+    public String getTitolo() {
+        return titolo;
+    }
+
+    public void setTitolo(String titolo) throws IllegalArgumentException {
+        if(titolo.isEmpty()){
+          throw new IllegalArgumentException("Il titolo non può essere vuoto");
+        }
+        this.titolo = titolo;
+    }
+
+    public int getnPagine() {
+        return nPagine;
+    }
+
+    public void setnPagine(int nPagine) throws IllegalArgumentException {
+        if(nPagine <= 0){
+            throw new IllegalArgumentException("Numero di pagine non valido");
+        }
+        this.nPagine = nPagine;
+    }
+
+    public String getAutore() {
+        return autore;
+    }
+
+    public void setAutore(String autore) throws IllegalArgumentException {
+        if(autore.isEmpty()){
+            throw new IllegalArgumentException("L'autore non può essere vuoto");
+        }
+        this.autore = autore;
+    }
+
+    public String getEditore() {
+        return editore;
+    }
+
+    public void setEditore(String editore) throws IllegalArgumentException {
+        if(editore.isEmpty()){
+            throw new IllegalArgumentException("L'editore non può essere vuoto");
+        }
+        this.editore = editore;
+    }
 }
