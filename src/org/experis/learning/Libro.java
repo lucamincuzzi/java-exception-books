@@ -10,8 +10,8 @@ public class Libro {
     // Costruttori
 
     public Libro(String titolo, int nPagine, String autore, String editore) throws IllegalArgumentException {
-        if(titolo.isEmpty() || nPagine <= 0 || autore.isEmpty() || editore.isEmpty()){
-            throw new IllegalArgumentException("Dati non validi, riprovare");
+        if(titolo == null || titolo.isEmpty() ||  nPagine <= 0 || autore == null || autore.isEmpty() || editore == null || editore.isEmpty()){
+            throw new IllegalArgumentException();
         }
         this.titolo = titolo;
         this.nPagine = nPagine;
